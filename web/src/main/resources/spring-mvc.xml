@@ -23,13 +23,14 @@
     </context:component-scan>
 
 
-    <!-- 会自动注册了validator  ConversionService  -->
+    <!-- 会自动注册了validator  ConversionService        -->
     <mvc:annotation-driven
             validator="validator"
             conversion-service="conversionService"
             content-negotiation-manager="contentNegotiationManager"
-            enable-matrix-variables="true"
+          enable-matrix-variables="true"
             >
+         
         <!--enableMatrixVariables="true">-->
         <!-- 异步支持 默认30秒超时 -->
         <mvc:async-support default-timeout="30000" task-executor="executor"/>

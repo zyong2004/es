@@ -179,10 +179,10 @@
     <!-- 类型转换及数据格式化 -->
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"/>
 
-    <!-- 直接把id转换为entity 必须非lazy否则无法注册-->
-    <bean id="domainClassConverter" class="org.springframework.data.repository.support.DomainClassConverter">
+    <!-- 直接把id转换为entity 必须非lazy否则无法注册--><!--很奇怪，现在加上这句话始终启动不了，2016年5月19日 14:42:42 注释掉-->
+  <!--   <bean id="domainClassConverter" class="org.springframework.data.repository.support.DomainClassConverter">
         <constructor-arg ref="conversionService"/>
-    </bean>
+    </bean> -->
 
     <!--设置查询字符串转换器的conversion service-->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
